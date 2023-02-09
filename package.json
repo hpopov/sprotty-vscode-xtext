@@ -17,7 +17,6 @@
     "packages/sprotty-vscode",
     "packages/sprotty-vscode-protocol",
     "packages/sprotty-vscode-webview",
-    "examples/states-langium/extension",
     "examples/states-langium/language-server",
     "examples/states-xtext/extension",
     "examples/states-webview"
