@@ -1,37 +1,37 @@
 buildscript {
 	repositories {
 		mavenCentral()
+		gradlePluginPortal()
 	}
 	dependencies {
-		classpath 'org.xtext:xtext-gradle-plugin:2.0.8'
+		classpath 'org.xtext:xtext-gradle-plugin:3.0.2'
 	}
 }
 
 subprojects {
-	ext.xtextVersion = '2.26.0.M2'
+	ext.xtextVersion = '2.29.0'
 	ext.sprottyVersion = '0.9.1'
 	ext.elkVersion = '0.7.1'
-	
+
 	repositories {
 		mavenCentral()
 	}
-	
-	apply plugin: 'java'
+
+	apply plugin: 'java-library'
 	dependencies {
-		compile platform("org.eclipse.xtext:xtext-dev-bom:${xtextVersion}")
+		api platform("org.eclipse.xtext:xtext-dev-bom:${xtextVersion}")
 	}
 
 	apply plugin: 'org.xtext.xtend'
 	apply from: "${rootDir}/gradle/source-layout.gradle"
-	apply from: "${rootDir}/gradle/maven-deployment.gradle"
 	apply plugin: 'eclipse'
-	
+
 	group = 'io.typefox.examples.theia.states'
-	//version = '1.0.0-SNAPSHOT'
-	
-	sourceCompatibility = '11'
-	targetCompatibility = '11'
-	
+	// version = '1.0.0-SNAPSHOT'
+
+	sourceCompatibility = '17'
+	targetCompatibility = '17'
+
 	configurations.all {
 		exclude group: 'asm'
 	}
