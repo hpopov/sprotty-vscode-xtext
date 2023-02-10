@@ -2,8 +2,6 @@
 
 This library contains glue code for [Sprotty](https://www.npmjs.com/package/sprotty) diagrams in VS Code. The diagrams can optionally be backed by a [language server](https://microsoft.github.io/language-server-protocol/).
 
-A complete example with a [Langium](https://langium.org) language server is available [here](https://github.com/eclipse/sprotty-vscode/tree/master/examples/states-langium).
-
 ## Getting Started
 
 As first step, you need to implement a [webview](https://code.visualstudio.com/api/extension-guides/webview) that renders your diagrams using [sprotty-vscode-webview](https://www.npmjs.com/package/sprotty-vscode-webview). The webview package should bundle its code into a single JavaScript file (e.g. with [Webpack](https://webpack.js.org)) and put it into your VS Code extension package. The default implementation assumes that the webview code is available at the path `pack/webview.js` relative to the extension folder.

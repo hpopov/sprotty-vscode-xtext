@@ -11,7 +11,7 @@
     "shx": "^0.3.4"
   },
   "workspaces": [
-    "examples/states-xtext/extension",
-    "examples/states-webview"
+    "xtext/extension",
+    "webview"
   ]
 }

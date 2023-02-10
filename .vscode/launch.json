@@ -11,12 +11,11 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "${workspaceFolder}/examples/workspace",
-                "--extensionDevelopmentPath=${workspaceFolder}/examples/states-xtext/extension"
+                "${workspaceFolder}/workspace",
+                "--extensionDevelopmentPath=${workspaceFolder}/xtext/extension"
             ],
             "outFiles": [
-                "${workspaceFolder}/examples/states-xtext/extension/pack/*.js",
-                "${workspaceFolder}/sprotty-vscode-extension/lib/**/*.js"
+                "${workspaceFolder}/xtext/extension/pack/*.js"
             ],
             "sourceMaps": true
         }

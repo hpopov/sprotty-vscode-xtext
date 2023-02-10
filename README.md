@@ -1,4 +1,4 @@
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/eclipse/sprotty-vscode) 
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/eclipse/sprotty-vscode)
 
 # sprotty-vscode
 
@@ -16,16 +16,16 @@ Also contains an example extension for a domain-specific language for statemachi
 
 ## Architecture
 
-In VS Code, extensions can contribute new UI components using a webview. Webviews communicate 
-with the extension using the `postMessage` API. The `SprottyVscodeExtension` use this to send and 
+In VS Code, extensions can contribute new UI components using a webview. Webviews communicate
+with the extension using the `postMessage` API. The `SprottyVscodeExtension` use this to send and
 receive Sprotty Actions to and from a `SprottyWebview`. The latter runs a webpacked `bundle.js`
 that contains the Sprotty diagram code.
 
 ![Architecture Diagram](images/architecture.png)
 
 If your extension provides a language, you can include a [Sprotty-enhanced language server](https://github.com/eclipse/sprotty-server) to get fully synchronized diagrams for your language
-artifacts. The `SprottyVscodeLanguageExtension` acts as a relay between the language server and a 
-`SprottyLanguageWebview`, and intercepts actions/LSP messages that 
+artifacts. The `SprottyVscodeLanguageExtension` acts as a relay between the language server and a
+`SprottyLanguageWebview`, and intercepts actions/LSP messages that
 require to interact with the VS Code workbench.
 
 ## Contents
@@ -40,6 +40,6 @@ The repo is structured as follows
 
 Compile the library code and the examples
 ```
-examples/states-xtext/language-server/gradlew -p examples/states-xtext/language-server/ build && yarn
+xtext/language-server/gradlew -p xtext/language-server/ build && yarn
 ```
 

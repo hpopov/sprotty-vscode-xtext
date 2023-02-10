@@ -28,7 +28,7 @@ jobs:
     - name: Build Xtext Example
       shell: bash
       run: |
-        cd examples/states-xtext/language-server
+        cd xtext/language-server
         ./gradlew build
     - name: Build Packages
       shell: bash
