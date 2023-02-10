@@ -4,20 +4,13 @@
     "prepare": "lerna run prepare",
     "clean": "lerna run clean",
     "build": "lerna run build",
-    "lint": "lerna run lint",
-    "publish:prepare": "lerna version --ignore-scripts --yes --no-push",
-    "publish:latest": "lerna publish from-git --no-verify-access --yes --no-push",
-    "publish:next": "SHA=$(git rev-parse --short HEAD) && lerna publish preminor --exact --canary --preid next.${SHA} --dist-tag next --no-git-reset --no-git-tag-version --no-push --ignore-scripts --yes --no-verify-access"
+    "lint": "lerna run lint"
   },
   "devDependencies": {
     "lerna": "^6.1.0",
     "shx": "^0.3.4"
   },
   "workspaces": [
-    "packages/sprotty-vscode",
-    "packages/sprotty-vscode-protocol",
-    "packages/sprotty-vscode-webview",
-    "examples/states-langium/language-server",
     "examples/states-xtext/extension",
     "examples/states-webview"
   ]

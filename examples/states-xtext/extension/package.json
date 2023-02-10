@@ -138,8 +138,6 @@
         ]
     },
     "activationEvents": [
-        "onLanguage:states",
-        "onCommand:states.diagram.open"
     ],
     "files": [
         "lib",
